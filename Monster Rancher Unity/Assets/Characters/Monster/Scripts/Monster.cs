@@ -34,21 +34,21 @@ public class Monster : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		stats [0] = 100;
-		stats [1] = 100;
-		stats [2] = 100;
-		stats [3] = 100;
-		stats [4] = 100;
-		stats [5] = 100;
-		stats [6] = 100;
-		stats [7] = 20;
-		stats [8] = 100;
-		stats [9] = 100;
-		stats [10] = 100;
-		stats [11] = 100;
-		stats [12] = 100;
-		stats [13] = 100;
-		stats [14] = 20;
+		stats [0] = 100; //lif
+		stats [1] = 100; //pow
+		stats [2] = 100; //int
+		stats [3] = 100; //ski
+		stats [4] = 100; //spd
+		stats [5] = 100; //def
+		stats [6] = (int)(((int)stats[10] + (int)stats[13]) / 2); //loyalty, avg of spoil and fear
+		stats [7] = 20; //lifespan
+		stats [8] = 0; //stress
+		stats [9] = 0; //fatigue
+		stats [10] = 100; //spoil
+		stats [11] = 100; //form
+		stats [12] = 100; //clutch
+		stats [13] = 100; //fear
+		stats [14] = 20; //OG lifespan
 
 		statAcq [0] = 1;
 		statAcq [1] = 2;
@@ -288,6 +288,9 @@ public class Monster : MonoBehaviour {
 
 		Debug.Log ("lif now is " + getLif ());
 
+		setStress (10);
+		setFatigue (10);
+
 		advWeek ();
 	}
 
@@ -307,6 +310,9 @@ public class Monster : MonoBehaviour {
 		}
 
 		Debug.Log ("pow now is " + getPow ());
+
+		setStress (10);
+		setFatigue (10);
 
 		advWeek ();
 	}
@@ -328,6 +334,9 @@ public class Monster : MonoBehaviour {
 
 		Debug.Log ("Int now is " + getInt ());
 
+		setStress (10);
+		setFatigue (10);
+
 		advWeek ();
 	}
 
@@ -347,6 +356,9 @@ public class Monster : MonoBehaviour {
 		}
 
 		Debug.Log ("Ski now is " + getSki ());
+
+		setStress (10);
+		setFatigue (10);
 
 		advWeek ();
 	}
@@ -368,6 +380,9 @@ public class Monster : MonoBehaviour {
 
 		Debug.Log ("Spd now is " + getSpd ());
 
+		setStress (10);
+		setFatigue (10);
+
 		advWeek ();
 	}
 
@@ -387,6 +402,19 @@ public class Monster : MonoBehaviour {
 		}
 
 		Debug.Log ("Def now is " + getDef ());
+
+		setStress (10);
+		setFatigue (10);
+
+		advWeek ();
+	}
+
+	//Resting method
+	public void rest(){
+		setStress (-20);
+		setFatigue (-20);
+
+		Debug.Log ("rested!  Stress now " + getStress () + " and fatigue now " + getFatigue ());
 
 		advWeek ();
 	}
