@@ -2,11 +2,13 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Characters\Monster\Scripts\Monster.cs">
     <Files>
-      <File FileName="Assets\Characters\Monster\Scripts\Monster.cs" Line="25" Column="4" />
+      <File FileName="Assets\Characters\Monster\Scripts\Monster.cs" Line="278" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <FunctionBreakpoint line="287" column="1" function="advWeek" language="C#" params="" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
